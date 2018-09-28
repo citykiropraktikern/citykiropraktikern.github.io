@@ -1,0 +1,66 @@
+.font-primary {
+    font-family: "Arial Black", Gadget, sans-serif !important;
+}
+
+.font-secondary {
+    font-family: "Arial Black", Gadget, sans-serif !important;
+}
+
+.site-title a,
+.site-description {
+    font-family: "Arial Black", Gadget, sans-serif !important;
+}
+
+.sidrmenu-section,
+.nav-section {
+    font-family: "Arial Black", Gadget, sans-serif !important;
+}
+
+.copyright {
+    font-family: "Arial Black", Gadget, sans-serif !important;
+}
+
+.cadetblue .site-title a {
+    color: #6a6a6a!important;
+}
+
+.cadetblue .site-description {
+    color: #6a6a6a!important;
+}
+
+.cadetblue .loop-post-title h1 a {
+    color: #444444!important;
+}
+
+.cadetblue .loop-post-meta {
+    color: #000000!important;
+}
+
+.cadetblue .loop-post-excerpt p {
+    color: #000000!important;
+}
+
+.cadetblue .post-title h1 {
+    color: #000000!important;
+}
+
+.cadetblue .post-meta {
+    color: #000000!important;
+}
+
+.cadetblue .post-content {
+    color: #000000!important;
+}
+
+.recentcomments a {
+    display: inline !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+body.custom-background {
+    background-image: url('/images/bg.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+}
