@@ -743,6 +743,30 @@
             background-color: #ffffff;
         }
     </style>
+    <style id="stars">
+        :root {
+            --star-size: 4rem;
+            --star-color: #ccc;
+            --star-background: #fc0;
+        }
+
+        .Stars {
+            --percent: calc(var(--rating) / 5 * 100%);
+
+            display: inline-block;
+            font-size: var(--star-size);
+            font-family: Times; /* make sure ★ appears correctly */
+            line-height: 1;
+
+            &::before {
+                content: '★★★★★';
+                letter-spacing: 3px;
+                background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    </style>
 </head>
 
 <body
@@ -892,7 +916,8 @@
                 <div class="header-titles">
                     <div class="site-title faux-heading"><a href="/">Citykiropraktikern</a>
                     </div>
-                    <div class="site-description">Snabb, säker och effektiv behandling av erfaren kiropraktor centralt i Malmö</div>
+                    <div class="site-description">Snabb, säker och effektiv behandling av erfaren kiropraktor centralt i
+                        Malmö</div>
                     <!-- .site-description -->
                 </div><!-- .header-titles -->
 
@@ -926,9 +951,9 @@
                         <li id="menu-item-79"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a
                                 href="/referenser/">Referenser</a></li>
-						<li id="menu-item-89"
-							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a
-								href="/kontakta-oss/">Kontakta oss</a></li>
+                        <li id="menu-item-89"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a
+                                href="/kontakta-oss/">Kontakta oss</a></li>
                         <li id="menu-item-189"
                             class="cta_akut menu-item menu-item-type-post_type menu-item-object-page menu-item-189"><a
                                 href="/akuttid/">Akut</a></li>
@@ -964,10 +989,9 @@
                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79">
                                 <div class="ancestor-wrapper"><a href="/referenser/">Referenser</a></div>
                             </li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89">
-								<div class="ancestor-wrapper"><a
-										href="/kontakta-oss/">Kontakta oss</a></div>
-							</li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89">
+                                <div class="ancestor-wrapper"><a href="/kontakta-oss/">Kontakta oss</a></div>
+                            </li>
                             <li class="cta_akut menu-item menu-item-type-post_type menu-item-object-page menu-item-189">
                                 <div class="ancestor-wrapper"><a href="/akuttid/">Akut</a>
                                 </div>
@@ -1000,117 +1024,143 @@
                             sizes="(max-width: 648px) 100vw, 648px"
                             srcset="/assets/images/jag.jpg 648w, assets/images/jag-243x300.jpg 243w, assets/images/jag-610x753.jpg 610w">
                     </figure>
-                    <p>Snabb, säker och effektiv behandling av erfaren kiropraktor. Ring <a href="tel:+46733822980">+46 (0)733822980</a> vid behov av akut tid.</p>
-                    <p> Sedan 1998 centralt i Malmö. Tidigare i Hansacompaniet,
-                        Capio Citykliniken. Nu fortsatt centralt i Malmö. På Föreningsgatan 26 brevid stadshuset.</p>
-                    <p>Kiropraktor Malmö.</p>
+                    <div class="rating" style="text-align: center; margin-top: 20px;">
+                        <div class="Stars" style="--rating: 4.7;" aria-label="Betyg på 4.7 av 5.">
+                            <p style="font-size: 18px; color: #000;">4,7 stjärnor baserat på 589 betyg</p>
+                        </div>
+                        <p>Snabb, säker och effektiv behandling av erfaren kiropraktor. Ring <a
+                                href="tel:+46733822980">+46 (0)733822980</a> vid behov av akut tid.</p>
+                        <p> Sedan 1998 centralt i Malmö. Tidigare i Hansacompaniet,
+                            Capio Citykliniken. Nu fortsatt centralt i Malmö. På Föreningsgatan 26 brevid stadshuset.
+                        </p>
+                        <p>Kiropraktor Malmö.</p>
 
-                    <div class="is-layout-flex wp-block-buttons">
-                        <div class="wp-block-button"><a class="wp-block-button__link"
-                                href="https://vj1.se/vj/app/booking/?id=324e767477513663654e495667624b75764a386374413d3d&place=1">Boka online!</a></div>
-                        <div class="wp-block-button"><a class="wp-block-button__link" href="tel:+46733822980">Ring
-                                nu!</a></div>
-                    </div>
+                        <div class="is-layout-flex wp-block-buttons">
+                            <div class="wp-block-button"><a class="wp-block-button__link"
+                                    href="https://vj1.se/vj/app/booking/?id=324e767477513663654e495667624b75764a386374413d3d&place=1">Boka
+                                    online!</a></div>
+                            <div class="wp-block-button"><a class="wp-block-button__link" href="tel:+46733822980">Ring
+                                    nu!</a></div>
+                        </div>
 
-					<h2>Kontaktformulär</h2>
-                    <p>Fyll i formuläret nedan med dina uppgifter och frågor, och vi kommer att svara så snart som möjligt.</p>
-					<p>Tveka inte att nå ut till oss med dina frågor eller behov - vi ser fram emot att höra från dig!</p>
-					<script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-					<script>
-						hbspt.forms.create({
-						region: "eu1",
-						portalId: "26179343",
-						formId: "22b10076-7e33-467e-8df0-dae8acbf5a7f"
-						});
-					</script>
+                        <h2>Kontaktformulär</h2>
+                        <p>Fyll i formuläret nedan med dina uppgifter och frågor, och vi kommer att svara så snart som
+                            möjligt.</p>
+                        <p>Tveka inte att nå ut till oss med dina frågor eller behov - vi ser fram emot att höra från
+                            dig!</p>
+                        <script charset="utf-8" type="text/javascript"
+                            src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+                        <script>
+                            hbspt.forms.create({
+                                region: "eu1",
+                                portalId: "26179343",
+                                formId: "22b10076-7e33-467e-8df0-dae8acbf5a7f"
+                            });
+                        </script>
 
-                    <h3>🎁 Ge bort hälsa och välmående i present!</h3>
-                    <p>Överraska någon du bryr dig om med ett presentkort till ett nybesök hos en legitimerad kiropraktor.
-                        Som en extra gåva från oss ingår ett återbesök i priset – 
-                        allt för att säkerställa bästa möjliga resultat och välbefinnande.</p>
-                    <p>💡 Presentkortet köps enkelt på plats i vår klinik. Perfekt som gåva när du vill visa omtanke.
-                        Välkommen in och ge bort en investering i hälsa och rörelsefrihet!</p>
-
-
-                    <h2>Några recensioner från bokningssytemet:</h2>
-                    <h4>Anders B.</h4>
-                    <p>Världsklass! Provat allt i hela världen, Magnus är i  särklass den bästa kiropraktorn </p>
-                    <h4>Kim L.</h4>
-                    <p>Kompetens personifierad</p>
-                    <h4>Mats N.</h4>
-                    <p>Han har hjälpt mig några ggr när jag knappt kunnat stå rak Har haft så otroligt ont i ryggen.Men  redan efter en behandling så är man mycket bättre Han har magiska händer </p>
+                        <h3>🎁 Ge bort hälsa och välmående i present!</h3>
+                        <p>Överraska någon du bryr dig om med ett presentkort till ett nybesök hos en legitimerad
+                            kiropraktor.
+                            Som en extra gåva från oss ingår ett återbesök i priset –
+                            allt för att säkerställa bästa möjliga resultat och välbefinnande.</p>
+                        <p>💡 Presentkortet köps enkelt på plats i vår klinik. Perfekt som gåva när du vill visa
+                            omtanke.
+                            Välkommen in och ge bort en investering i hälsa och rörelsefrihet!</p>
 
 
-                    <h2>Effekter av kiropraktisk behandling</h2>
-                    <ul>
-                        <li>Minskar smärta</li>
-                        <li>Återställer rörlighet</li>
-                        <li>Minskar risken för återfall</li>
-                    </ul>
+                        <h2>Några recensioner från bokningssytemet:</h2>
+                        <h4>Anders B.</h4>
+                        <p>Världsklass! Provat allt i hela världen, Magnus är i särklass den bästa kiropraktorn </p>
+                        <h4>Kim L.</h4>
+                        <p>Kompetens personifierad</p>
+                        <h4>Mats N.</h4>
+                        <p>Han har hjälpt mig några ggr när jag knappt kunnat stå rak Har haft så otroligt ont i
+                            ryggen.Men redan efter en behandling så är man mycket bättre Han har magiska händer </p>
 
-                    <h3>Hur lång tid?</h3>
-                    <p>Ett nybesök tar ca. 40 min och ett återbesök ca. 20 min.</p>
 
-                    <h3>Öppettider &amp; Pris</h3>
-                    <p>Kiropraktor Malmö.</p>
-                    <p>Måndag till fredag 09:00-18:00. Ny- &amp; återbesök 700:-.</p>
-                    <p>Akuta tider måndag till fredag efter 18:00, lördag och helger 1900:-</p>
+                        <h2>Effekter av kiropraktisk behandling</h2>
+                        <ul>
+                            <li>Minskar smärta</li>
+                            <li>Återställer rörlighet</li>
+                            <li>Minskar risken för återfall</li>
+                        </ul>
 
-                    <h3>Adress</h3>
-                    <p>Kiropraktor centralt i Malmö. Föreningsgatan 26, vån 3. Inga dörrkoder nödvändiga. Stig in i
-                        väntrummet. Så kommer jag och hämtar dig när det är din tur.</p>
+                        <h3>Hur lång tid?</h3>
+                        <p>Ett nybesök tar ca. 40 min och ett återbesök ca. 20 min.</p>
 
-                    <h3>P-plats</h3>
-                    <p>P-plats finns. Både på gavel och baksida av hus. Även på Andreelundsvägen bakom hus. Men kräver
-                        parkerings app; easypark, eller liknande. <strong>Se Upp!</strong> Olika koder på gatan och
-                        fastighet. På gatan går det att parkera med kreditkort. Kiropraktor Malmö.</p>
+                        <h3>Öppettider &amp; Pris</h3>
+                        <p>Kiropraktor Malmö.</p>
+                        <p>Måndag till fredag 09:00-18:00. Ny- &amp; återbesök 700:-.</p>
+                        <p>Akuta tider måndag till fredag efter 18:00, lördag och helger 1900:-</p>
 
-                    <h2>Kiropraktor Magnus Eklund</h2>
+                        <h3>Adress</h3>
+                        <p>Kiropraktor centralt i Malmö. Föreningsgatan 26, vån 3. Inga dörrkoder nödvändiga. Stig in i
+                            väntrummet. Så kommer jag och hämtar dig när det är din tur.</p>
 
-                    <p>Kiropraktor Malmö. Magnus Eklund tog, efter 5 års studier sin master examen i kiropraktik i
-                        England 1998. Därefter 1 års praktiktjänstgöring. Delvis på ortopedkliniken UMAS,
-                        privat klinik och på vårdcentral, Capio citykliniken i Hansacompagniet. Dessförinnan sjukvårdare
-                        i det militära med praktik på ljungby lassarett och en fil. kand i praktisk filosofi. Från Lunds
-                        universitet.</p>
+                        <h3>P-plats</h3>
+                        <p>P-plats finns. Både på gavel och baksida av hus. Även på Andreelundsvägen bakom hus. Men
+                            kräver
+                            parkerings app; easypark, eller liknande. <strong>Se Upp!</strong> Olika koder på gatan och
+                            fastighet. På gatan går det att parkera med kreditkort. Kiropraktor Malmö.</p>
 
-                    <p>Sedan 2018 i nya lokaler på Föreningsgatan 26. Medlem i LKR, legitimerade kiropraktorers
-                        riksorganisation och ECU, european chiropractors association sedan 1998.</p>
+                        <h2>Kiropraktor Magnus Eklund</h2>
 
-                    <h2>Kiropraktor i Malmö</h2>
+                        <p>Kiropraktor Malmö. Magnus Eklund tog, efter 5 års studier sin master examen i kiropraktik i
+                            England 1998. Därefter 1 års praktiktjänstgöring. Delvis på ortopedkliniken UMAS,
+                            privat klinik och på vårdcentral, Capio citykliniken i Hansacompagniet. Dessförinnan
+                            sjukvårdare
+                            i det militära med praktik på ljungby lassarett och en fil. kand i praktisk filosofi. Från
+                            Lunds
+                            universitet.</p>
 
-                    <p>Sedan 1921 har äkta kiropraktorer varit en viktig del av Malmös medicinska landskap, och den
-                        allra första kiropraktorn som etablerade sig i staden var Lennart Thomson. Han var samtidigt den
-                        första kiropraktorn i Sverige.Han hade tidigare bott i USA och genomgått kiropraktisk behandling
-                        där, vilket inspirerade honom att själv utbilda sig inom området. Efter sin utbildning återvände
-                        han till Malmö och öppnade sin egen klinik, där han blev stadens första kiropraktor.</p>
+                        <p>Sedan 2018 i nya lokaler på Föreningsgatan 26. Medlem i LKR, legitimerade kiropraktorers
+                            riksorganisation och ECU, european chiropractors association sedan 1998.</p>
 
-                    <p>Det är värt att notera att legitimation för kiropraktorer med en godkänd utbildning i Sverige
-                        infördes först 1989. Den allra första godkända kiropraktorutbildningen i Europa startade i
-                        Bournemouth, England, och var den enda godkända utbildningen i Europa fram till 1990-talet.
-                        Numera erbjuds kiropraktorutbildningar i flera europeiska länder, inklusive Danmark, Frankrike,
-                        Tyskland, Spanien och Schweiz.</p>
+                        <h2>Kiropraktor i Malmö</h2>
 
-                    <p>Magnus Eklund, som även är känd som Citykiropraktorn, påbörjade sin kiropraktorutbildning när det
-                        endast fanns en godkänd kiropraktorskola i Europa. AECC i Bournemouth. Efter att ha avslutat sin
-                        femåriga masterutbildning tog han examen och började praktisera som kiropraktor i Malmö. Han har
-                        erfarenhet både från privat praxis och från att arbeta på vårdcentralen Capio i Hansacompagniet.
-                        i 18 år. Sedan 2018 har han sin egen klinik på Föreningsgatan 26 i Malmö.</p>
+                        <p>Sedan 1921 har äkta kiropraktorer varit en viktig del av Malmös medicinska landskap, och den
+                            allra första kiropraktorn som etablerade sig i staden var Lennart Thomson. Han var samtidigt
+                            den
+                            första kiropraktorn i Sverige.Han hade tidigare bott i USA och genomgått kiropraktisk
+                            behandling
+                            där, vilket inspirerade honom att själv utbilda sig inom området. Efter sin utbildning
+                            återvände
+                            han till Malmö och öppnade sin egen klinik, där han blev stadens första kiropraktor.</p>
 
-                    <p>På detta sätt fortsätter Magnus Eklund en imponerande tradition av välutbildade kiropraktorer i
-                        Malmö, som har varit en del av staden i över 100 år och erbjuder kiropraktisk vård av hög
-                        kvalitet för invånarna. Kiropraktor i Malmö den första kiropraktorn i Sverige.</p>
+                        <p>Det är värt att notera att legitimation för kiropraktorer med en godkänd utbildning i Sverige
+                            infördes först 1989. Den allra första godkända kiropraktorutbildningen i Europa startade i
+                            Bournemouth, England, och var den enda godkända utbildningen i Europa fram till 1990-talet.
+                            Numera erbjuds kiropraktorutbildningar i flera europeiska länder, inklusive Danmark,
+                            Frankrike,
+                            Tyskland, Spanien och Schweiz.</p>
 
-                    <div class="is-layout-flex wp-block-buttons">
-                        <div class="wp-block-button"><a class="wp-block-button__link"
-                                href="https://vj1.se/vj/app/booking/?id=324e767477513663654e495667624b75764a386374413d3d&place=1">Boka online!</a></div>
+                        <p>Magnus Eklund, som även är känd som Citykiropraktorn, påbörjade sin kiropraktorutbildning när
+                            det
+                            endast fanns en godkänd kiropraktorskola i Europa. AECC i Bournemouth. Efter att ha avslutat
+                            sin
+                            femåriga masterutbildning tog han examen och började praktisera som kiropraktor i Malmö. Han
+                            har
+                            erfarenhet både från privat praxis och från att arbeta på vårdcentralen Capio i
+                            Hansacompagniet.
+                            i 18 år. Sedan 2018 har han sin egen klinik på Föreningsgatan 26 i Malmö.</p>
 
-                        <div class="wp-block-button"><a class="wp-block-button__link" href="tel:+46733822980">Ring
-                                nu!</a></div>
+                        <p>På detta sätt fortsätter Magnus Eklund en imponerande tradition av välutbildade kiropraktorer
+                            i
+                            Malmö, som har varit en del av staden i över 100 år och erbjuder kiropraktisk vård av hög
+                            kvalitet för invånarna. Kiropraktor i Malmö den första kiropraktorn i Sverige.</p>
+
+                        <div class="is-layout-flex wp-block-buttons">
+                            <div class="wp-block-button"><a class="wp-block-button__link"
+                                    href="https://vj1.se/vj/app/booking/?id=324e767477513663654e495667624b75764a386374413d3d&place=1">Boka
+                                    online!</a></div>
+
+                            <div class="wp-block-button"><a class="wp-block-button__link" href="tel:+46733822980">Ring
+                                    nu!</a></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="section-inner">
-            </div>
+                <div class="section-inner">
+                </div>
         </article>
     </main>
 
@@ -1143,7 +1193,8 @@
                                         <div class="et_pb_blurb_content">
                                             <div class="et_pb_blurb_container">
                                                 <p><strong>Boka</strong><br>
-                                                    <a href="https://vj1.se/vj/app/booking/?id=324e767477513663654e495667624b75764a386374413d3d&place=1">Boka
+                                                    <a
+                                                        href="https://vj1.se/vj/app/booking/?id=324e767477513663654e495667624b75764a386374413d3d&place=1">Boka
                                                         direkt</a>
                                                 </p>
                                                 <p><strong>Adress</strong><br>
