@@ -583,6 +583,25 @@ summary + p {
   gap: 0.35rem;
 }
 
+.form-fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  grid-column: 1 / -1;
+}
+
+.form-legend {
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-bottom: 0.35rem;
+}
+
+.form-grid-nested {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
 .form-field span {
   font-weight: 600;
   font-size: 0.92rem;
@@ -692,7 +711,8 @@ summary + p {
 
   .card-grid,
   .services-grid,
-  .form-grid {
+  .form-grid,
+  .form-grid-nested {
     grid-template-columns: 1fr;
   }
 

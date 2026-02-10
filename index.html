@@ -14,16 +14,21 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.google-analytics.com; connect-src 'self' https://*.google-analytics.com; img-src 'self' data: https://*.google-analytics.com; style-src 'self'; font-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
   <link rel="canonical" href="https://citykiropraktikern.se/">
   <link rel="alternate" hreflang="sv-SE" href="https://citykiropraktikern.se/">
+  <link rel="alternate" hreflang="x-default" href="https://citykiropraktikern.se/">
   <link rel="preload" as="image" href="/assets/images/jag.jpg">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
   <meta property="og:locale" content="sv_SE">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Malmö Kiropraktor | Citykiropraktikern">
   <meta property="og:description" content="Snabb hjälp vid rygg- och nackbesvär. Boka online eller ring direkt för tid i Malmö.">
+  <meta property="og:site_name" content="Citykiropraktikern">
   <meta property="og:url" content="https://citykiropraktikern.se/">
   <meta property="og:image" content="https://citykiropraktikern.se/assets/images/jag.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Malmö Kiropraktor | Citykiropraktikern">
   <meta name="twitter:description" content="Boka tid online eller ring direkt för kiropraktisk behandling i Malmö.">
+  <meta name="twitter:site" content="@citykiropraktikern">
   <meta name="twitter:image" content="https://citykiropraktikern.se/assets/images/jag.jpg">
   <link rel="stylesheet" href="/assets/site.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3E31PMZ37"></script>
@@ -67,7 +72,11 @@
           </div>
         </div>
         <aside class="hero-card" aria-label="Kort information">
-          <img src="/assets/images/jag.jpg" width="648" height="800" alt="Kiropraktor Magnus Eklund i Malmö" fetchpriority="high">
+          <picture>
+            <source type="image/avif" srcset="/assets/images/jag.avif">
+            <source type="image/webp" srcset="/assets/images/jag.webp">
+            <img src="/assets/images/jag.jpg" width="648" height="800" alt="Kiropraktor på Citykiropraktikern i Malmö" fetchpriority="high">
+          </picture>
           <div class="hero-card-content">
             <ul class="hero-list">
               <li>Öppettider vardagar 09:00 till 18:00</li>
@@ -234,6 +243,7 @@
     {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
+      "@id": "https://citykiropraktikern.se/#business",
       "name": "Citykiropraktikern",
       "url": "https://citykiropraktikern.se/",
       "telephone": "+46722294463",
@@ -241,6 +251,9 @@
       "image": "https://citykiropraktikern.se/assets/images/jag.jpg",
       "description": "Kiropraktor i Malmö med fokus på rygg, nacke, leder och muskler.",
       "priceRange": "750-1900 SEK",
+      "sameAs": [
+        "https://www.google.com/maps/place/F%C3%B6reningsgatan+26,+211+52+Malm%C3%B6/"
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Föreningsgatan 26, vån 3",

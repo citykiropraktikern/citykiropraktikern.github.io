@@ -93,6 +93,11 @@
       return;
     }
 
+    if (status) {
+      status.textContent = "Skickar meddelande...";
+      status.classList.remove("form-status-success", "form-status-error");
+    }
+
     if (window.gtag) {
       window.gtag("event", "contact_form_submit", {
         event_category: "conversion",
