@@ -15,15 +15,46 @@
 
   var searchParams = new URLSearchParams(window.location.search);
   var sent = searchParams.get("sent");
-  if (status && sent === "1") {
-    status.textContent = "Tack. Ditt meddelande är skickat och vi återkommer så snart som möjligt.";
-    status.classList.add("form-status-success");
+
+  function clearSentParams() {
+    if (!window.history || !window.history.replaceState) {
+      return;
+    }
+    var cleanUrl = new URL(window.location.href);
+    cleanUrl.searchParams.delete("sent");
+    cleanUrl.searchParams.delete("reason");
+    window.history.replaceState({}, document.title, cleanUrl.pathname + cleanUrl.search + cleanUrl.hash);
+  }
+
+  if (sent === "1") {
+    var successMessage = "Tack. Ditt meddelande är skickat och vi återkommer så snart som möjligt.";
+
+    var thankYou = document.createElement("div");
+    thankYou.className = "form-thankyou";
+    thankYou.setAttribute("role", "status");
+    thankYou.setAttribute("aria-live", "polite");
+    thankYou.innerHTML =
+      "<h3>Tack för ditt meddelande</h3>" +
+      "<p>" + successMessage + "</p>" +
+      "<p>Behov av snabb hjälp? <a href=\"tel:+46722294463\">Ring +46 (0)733 82 29 80</a>.</p>";
+
+    form.replaceWith(thankYou);
+
+    if (status) {
+      status.hidden = true;
+      status.textContent = "";
+      status.classList.remove("form-status-success", "form-status-error");
+    }
+
     if (window.gtag) {
       window.gtag("event", "contact_form_success", {
         event_category: "conversion",
         event_label: window.location.pathname
       });
     }
+
+    clearSentParams();
+    return;
   }
 
   if (status && sent === "0") {
@@ -38,11 +69,8 @@
     }
   }
 
-  if ((sent === "1" || sent === "0") && window.history && window.history.replaceState) {
-    var cleanUrl = new URL(window.location.href);
-    cleanUrl.searchParams.delete("sent");
-    cleanUrl.searchParams.delete("reason");
-    window.history.replaceState({}, document.title, cleanUrl.pathname + cleanUrl.search + cleanUrl.hash);
+  if (sent === "0") {
+    clearSentParams();
   }
 
   var hasTrackedStart = false;

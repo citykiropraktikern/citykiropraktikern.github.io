@@ -659,6 +659,28 @@ summary + p {
   color: #8f2d2d;
 }
 
+.form-thankyou {
+  margin-top: 0.9rem;
+  border: 1px solid rgba(22, 94, 55, 0.28);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background: #edf8f1;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.form-thankyou h3 {
+  margin: 0;
+}
+
+.form-thankyou p {
+  margin: 0;
+}
+
+.form-thankyou a {
+  font-weight: 600;
+}
+
 :focus-visible {
   outline: 3px solid rgba(243, 170, 26, 0.8);
   outline-offset: 2px;
