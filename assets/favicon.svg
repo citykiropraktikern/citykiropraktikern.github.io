@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Citykiropraktikern">
+  <defs>
+    <linearGradient id="bg01e" x1="0" y1="0" x2="1" y2="0.9">
+      <stop offset="0%" stop-color="#007a73"/>
+      <stop offset="100%" stop-color="#003f3e"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg01e)"/>
+  <path d="M44.8 16.4h-9.3c-8.9 0-16.1 7.2-16.1 16.1s7.2 16.1 16.1 16.1h9.3v-7.2h-9.3c-4.9 0-8.9-4-8.9-8.9s4-8.9 8.9-8.9h9.3z" fill="#ffffff"/>
+  <circle cx="54.8" cy="19.5" r="4.1" fill="#f3aa1a"/>
+</svg>
