@@ -103,6 +103,24 @@ ul {
   z-index: 1000;
 }
 
+.offer-banner {
+  background: linear-gradient(90deg, var(--accent), #f7c948);
+  color: var(--text);
+  text-align: center;
+  padding: 0.85rem 1rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.offer-banner p {
+  margin: 0;
+}
+
+.offer-banner a {
+  color: var(--brand-dark);
+  font-weight: 700;
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
