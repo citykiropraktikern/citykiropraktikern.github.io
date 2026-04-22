@@ -1,3 +1,25 @@
+.offer-banner {
+  background: var(--accent, #f3aa1a);
+  color: #112125;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.offer-banner strong {
+  font-size: 1.1rem;
+}
+
+.offer-banner p {
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+}
+
+.offer-banner a {
+  color: var(--brand-dark, #00484a);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 :root {
   --bg: #f2f6f5;
   --bg-soft: #e6eeec;
