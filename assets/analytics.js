@@ -41,7 +41,7 @@ document.addEventListener("click", function (event) {
     });
   }
 
-  if (link.href.indexOf("vj1.se/vj/app/booking") !== -1) {
+  if (link.href.indexOf("bokadirekt.se/places/citykiropraktorn") !== -1) {
     window.gtag("event", "booking_click", {
       event_category: "conversion",
       event_label: link.href,
