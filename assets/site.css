@@ -17,22 +17,6 @@
   --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
 }
 
-.notice-banner {
-  background: #fff3cd;
-  border-bottom: 2px solid var(--accent);
-  padding: 0.75rem 1.5rem;
-  text-align: center;
-}
-.notice-banner p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #664d03;
-}
-.notice-banner a {
-  color: #664d03;
-  font-weight: 600;
-}
-
 *,
 *::before,
 *::after {
