@@ -9,6 +9,23 @@
   var phoneInput = form.querySelector('input[name="telefon"]');
   var emailInput = form.querySelector('input[name="epost"]');
 
+  var SOURCE_STORAGE_KEY = "contactFormSource";
+
+  function rememberSource() {
+    try {
+      window.sessionStorage.setItem(SOURCE_STORAGE_KEY, window.location.pathname);
+    } catch (e) {}
+  }
+
+  function consumeSource() {
+    var source = null;
+    try {
+      source = window.sessionStorage.getItem(SOURCE_STORAGE_KEY);
+      window.sessionStorage.removeItem(SOURCE_STORAGE_KEY);
+    } catch (e) {}
+    return source || window.location.pathname;
+  }
+
   if (action.indexOf("YOUR_CLOUDFLARE_WORKER_ENDPOINT") !== -1 && status) {
     status.textContent = "Formuläret är under aktivering. Ring gärna kliniken direkt så hjälper vi dig.";
   }
@@ -49,7 +66,7 @@
     if (window.gtag) {
       window.gtag("event", "contact_form_success", {
         event_category: "conversion",
-        event_label: window.location.pathname
+        event_label: consumeSource()
       });
     }
 
@@ -63,7 +80,7 @@
     if (window.gtag) {
       window.gtag("event", "contact_form_error", {
         event_category: "engagement",
-        event_label: window.location.pathname,
+        event_label: consumeSource(),
         reason: searchParams.get("reason") || "unknown"
       });
     }
@@ -120,6 +137,8 @@
       event.preventDefault();
       return;
     }
+
+    rememberSource();
 
     if (status) {
       status.textContent = "Skickar meddelande...";

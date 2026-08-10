@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="/assets/site.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3E31PMZ37"></script>
   <script src="/assets/analytics.js" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="/assets/contact-form.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Hoppa till innehåll</a>
@@ -201,6 +203,69 @@
             <a class="btn btn-accent" href="https://www.bokadirekt.se/places/citykiropraktorn-23478#services">Boka online</a>
             <a class="btn btn-secondary" href="tel:+46722333514">Ring nu</a>
           </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="kontakt">
+      <div class="container split">
+        <article class="surface">
+          <span class="eyebrow">Kontakt</span>
+          <h2>Boka, ring eller skriv till oss</h2>
+          <p class="muted">Det ska vara enkelt att nå oss. Boka online på några sekunder, ring direkt eller skicka ett meddelande så återkommer vi så snart som möjligt.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://www.bokadirekt.se/places/citykiropraktorn-23478#services">Boka online</a>
+            <a class="btn btn-secondary" href="tel:+46722333514">Ring +46 (0)722 33 35 14</a>
+            <a class="btn btn-accent" href="sms:+46722333514">Skicka sms</a>
+          </div>
+          <p class="mt-75">E-post: <a href="mailto:kiropraktor@citykiropraktikern.se">kiropraktor@citykiropraktikern.se</a></p>
+        </article>
+        <article class="surface">
+          <h2>Skicka meddelande till oss</h2>
+          <p class="muted">Skriv kort om dina besvär eller fråga så återkommer vi så snart som möjligt.</p>
+          <p class="muted mt-75">Ange minst ett kontaktsätt: telefon eller e-post.</p>
+          <form id="contact-form" class="contact-form" action="https://citykiropraktikern.jonas-lewin.workers.dev/submit" method="POST">
+            <div class="form-grid">
+              <label class="form-field">
+                <span>Namn</span>
+                <input type="text" name="namn" autocomplete="name" required>
+              </label>
+              <fieldset class="form-fieldset">
+                <legend class="form-legend">Kontaktuppgifter (telefon eller e-post krävs)</legend>
+                <div class="form-grid-nested">
+                  <label class="form-field">
+                    <span>Telefon</span>
+                    <input type="tel" name="telefon" autocomplete="tel" placeholder="+46...">
+                  </label>
+                  <label class="form-field">
+                    <span>E-post</span>
+                    <input type="email" name="epost" autocomplete="email">
+                  </label>
+                </div>
+              </fieldset>
+              <label class="form-field">
+                <span>Vad gäller det?</span>
+                <select name="arende" required>
+                  <option value="" selected disabled>Välj ämne</option>
+                  <option value="Nybesök">Nybesök</option>
+                  <option value="Akuttid">Akuttid</option>
+                  <option value="Återbesök">Återbesök</option>
+                  <option value="Övrig fråga">Övrig fråga</option>
+                </select>
+              </label>
+              <label class="form-field full">
+                <span>Meddelande</span>
+                <textarea name="meddelande" rows="5" required></textarea>
+              </label>
+            </div>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAACZUfBaLuLb_1kUw" data-action="contact_form_home"></div>
+            <label class="consent-row">
+              <input type="checkbox" name="samtycke" value="ja" required>
+              <span>Jag godkänner att ni kontaktar mig angående mitt meddelande.</span>
+            </label>
+            <button class="btn btn-primary" type="submit">Skicka meddelande</button>
+          </form>
+          <p id="contact-form-status" class="form-status muted" aria-live="polite">Om formuläret inte går att skicka just nu, ring gärna direkt på <a href="tel:+46722333514">+46 (0)722 33 35 14</a>.</p>
         </article>
       </div>
     </section>
