@@ -49,4 +49,13 @@ document.addEventListener("click", function (event) {
       link_text: (link.textContent || "").trim().slice(0, 100)
     });
   }
+
+  if (link.href.indexOf("google.com/maps?cid=") !== -1) {
+    window.gtag("event", "review_click", {
+      event_category: "engagement",
+      event_label: link.href,
+      page_path: window.location.pathname,
+      link_text: (link.textContent || "").trim().slice(0, 100)
+    });
+  }
 });
