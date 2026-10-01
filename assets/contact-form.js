@@ -53,7 +53,7 @@
     thankYou.innerHTML =
       "<h3>Tack för ditt meddelande</h3>" +
       "<p>" + successMessage + "</p>" +
-      "<p>Behov av snabb hjälp? <a href=\"tel:+46733822980\">Ring +46 (0)733 82 29 80</a>.</p>";
+      "<p>Behov av snabb hjälp? <a href=\"tel:+46722289598\">Ring +46 (0)722 28 95 98</a>.</p>";
 
     form.replaceWith(thankYou);
 
